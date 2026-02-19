@@ -1,6 +1,7 @@
 // FPA V1.0.0 (Beta)
+console.log("FPA Sandbox: V1");
 
-const DEBUG = false;
+const DEBUG = true;
 function debugLog(message) {
   if (DEBUG) {
     console.log(message);
