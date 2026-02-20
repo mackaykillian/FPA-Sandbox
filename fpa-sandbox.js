@@ -413,7 +413,7 @@ try {
     updatePageviewData();
 
     // Write LS Item
-    window.addEventListener("beforeunload", function () {
+    window.addEventListener("visibilitychange", function () {
       // Time on Session, Time on Pageview, and Last activity Record here
       window.fpaData.ses[0].tsos = millisToMinutesAndSeconds(
         Math.min(Date.now() - window.fpaData.ses[0].sst, 60 * 60 * 1000), //Cap at 60 minutes
