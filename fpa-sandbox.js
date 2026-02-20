@@ -396,6 +396,7 @@ try {
       const itemValue = JSON.parse(localStorage.getItem("_fpa_data")); // Read LS Item and store in global variable
       window.fpaData = itemValue;
       debugLog("LS Item READ complete");
+      console.log("FPA value read: ", itemValue);
       if (!itemValue) {
         console.warn("FPA Warning: LSR Empty");
       }
@@ -429,6 +430,7 @@ try {
       try {
         localStorage.setItem("_fpa_data", JSON.stringify(window.fpaData));
         debugLog("LS Item WRITE complete");
+        console.log("FPA value written: ", JSON.stringify(window.fpaData));
       } catch (e) {
         console.error("FPA Error: LSW Fail", e);
       }
